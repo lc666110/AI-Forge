@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply border-border;
+}
+body {
+  @apply bg-background text-foreground antialiased;
+}
+input,
+textarea,
+select {
+  @apply bg-zinc-900;
+}
+.prose pre {
+  @apply overflow-x-auto rounded-lg bg-black p-4;
+}
+.prose code {
+  @apply text-violet-300;
+}

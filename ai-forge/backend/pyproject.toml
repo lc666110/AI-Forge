@@ -1,0 +1,14 @@
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI intentionally declares dependency providers and upload metadata as
+# default values; these calls are evaluated once while routes are registered.
+"app/api/deps.py" = ["B008"]
+"app/api/routes.py" = ["B008"]
